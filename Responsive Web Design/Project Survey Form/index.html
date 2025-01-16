@@ -29,13 +29,31 @@
                     <option value="phone">Phone</option>
                 </select>
             </label>
+            <!-- Radio Buttons -->
             <label>Preferred Language</label>
             <label for="english-lan">
-                <input id="english-lan"type="radio" name="language" value="english" checked> English
+                <input id="english-lan"type="radio" name="language" value="english" class="inline" checked> English
             </label>
             <label for="dutch-lan">
-                <input id="dutch-lan" type="radio" name="language" value="dutch"> Dutch
+                <input id="dutch-lan" type="radio" name="language" value="dutch" class="inline"> Dutch
             </label>
+            <!-- Checkboxes -->
+             <label>Interests</label>
+             <label for="tech">
+                <input type="checkbox" id="tech" name="interests" value="tech" class="inline"> Technology
+             </label>
+             <label for="sports">
+                <input type="checkbox" id="sports" name="interests" value="sports" class="inline"> Sports
+             </label>
+             <label for="tech">
+                <input type="checkbox" id="music" name="interests" value="music" class="inline"> Music
+             </label>
+             <!-- Textarea -->
+            <label for="comments">Additional Comments
+                <textarea id="comments" name="comments" placeholder="Enter your comments here..." rows="4" cols="50"></textarea>
+            </label>
+            <!-- Submit Button -->
+            <button type="submit" id="submit">Submit</button>
         </form>
     </body>
 </html>
