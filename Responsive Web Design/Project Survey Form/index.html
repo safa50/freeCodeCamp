@@ -10,23 +10,32 @@
         <h1 id="title">Safa Dundar Survey Form</h1>
         <p id="description">Thank you for taking the time to fill in my survey form</p>
         <form id="survey-form" method="post">
-            <label for="name" >Name <input id="name-label" name="name" type="text" placeholder="Please enter your name" required /></label>
-            <label for="email">Email <input id="email-label" name="email" type="email" placeholder="Please enter your email" required /></label>
-            <label for="number">Age <input id="age-label" name="age" type="number" min="13" max="120" placeholder="Please enter your age" required /></label>
-            <label for="role-option">Which option best descibes your current role?
-                <select id="dropdown" name="role">
-                    <option value="">Select current role</option>
-                    <option value="1">Student</option>
-                    <option value="2">Full Time Job</option>
-                    <option value="3">Full Time Learner</option>
-                    <option value="4">Prefer not to say</option>
-                    <option value="5">Other</option>
+            <!--Name input-->
+            <label for="name" >Name 
+                <input id="name-label" name="name" type="text" placeholder="Please enter your name" required />
+            </label>
+            <!--email input-->
+            <label for="email">Email 
+                <input id="email-label" name="email" type="email" placeholder="Please enter your email" required />
+            </label>
+            <!--Age input-->
+            <label for="number">Age 
+                <input id="age-label" name="age" type="number" min="13" max="120" placeholder="Please enter your age" required />
+            </label>
+            <!-- Dropdown (Select) -->
+            <label for="dropdown">Preferred Contact Method
+                <select id="dropdown" name="contact-method">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
                 </select>
             </label>
-            <p>would you recommend freecodeCamp to a friend?</p>
-            <label for="definity">Definitely<input id="definitely" name="definitely" type="radio" class="input-radio" checked/></label>
-            <label for="maybe">Maybe<input id="maybe" name="maybe" type="radio" class="input-radio" /></label>
-            <label for="not-sure">Not sure<input id="not-sure" name="not-sure" type="radio" class="input-radio" /></label>
+            <label>Preferred Language</label>
+            <label for="english-lan">
+                <input id="english-lan"type="radio" name="language" value="english" checked> English
+            </label>
+            <label for="dutch-lan">
+                <input id="dutch-lan" type="radio" name="language" value="dutch"> Dutch
+            </label>
         </form>
     </body>
 </html>
