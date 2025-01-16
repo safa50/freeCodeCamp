@@ -10,10 +10,23 @@
         <h1 id="title">Safa Dundar Survey Form</h1>
         <p id="description">Thank you for taking the time to fill in my survey form</p>
         <form id="survey-form" method="post">
-            <label for="name">Name <input id="name-label" name="name" type="text" required /></label>
-            <label for="email">Email <input id="email-label" name="email" type="email" required /></label>
-            <label for="number">Age <input id="age-label" name="age" type="number" min="13" max="120" required /></label>
-
+            <label for="name" >Name <input id="name-label" name="name" type="text" placeholder="Please enter your name" required /></label>
+            <label for="email">Email <input id="email-label" name="email" type="email" placeholder="Please enter your email" required /></label>
+            <label for="number">Age <input id="age-label" name="age" type="number" min="13" max="120" placeholder="Please enter your age" required /></label>
+            <label for="role-option">Which option best descibes your current role?
+                <select id="dropdown" name="role">
+                    <option value="">Select current role</option>
+                    <option value="1">Student</option>
+                    <option value="2">Full Time Job</option>
+                    <option value="3">Full Time Learner</option>
+                    <option value="4">Prefer not to say</option>
+                    <option value="5">Other</option>
+                </select>
+            </label>
+            <p>would you recommend freecodeCamp to a friend?</p>
+            <label for="definity">Definitely<input id="definitely" name="definitely" type="radio" class="input-radio" checked/></label>
+            <label for="maybe">Maybe<input id="maybe" name="maybe" type="radio" class="input-radio" /></label>
+            <label for="not-sure">Not sure<input id="not-sure" name="not-sure" type="radio" class="input-radio" /></label>
         </form>
     </body>
 </html>
