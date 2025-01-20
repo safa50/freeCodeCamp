@@ -18,11 +18,16 @@
   }
   
   .gallery {
+    border: 8px solid black;
     display: flex;
     flex-direction: row;
+    /*will de pictures shrink(nowrap> or not (wrap?)*/
     flex-wrap: wrap;
+    /*Basically to center a Div*/
     justify-content: center;
     align-items: center;
+    align-content: center;
+    /*-------------------------*/
     gap: 16px;
     max-width: 1400px;
     margin: 0 auto;
