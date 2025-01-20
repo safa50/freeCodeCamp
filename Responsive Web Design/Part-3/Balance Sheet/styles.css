@@ -1,0 +1,110 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #0a0a23;
+}
+
+/*Select any span whose class includes sr-only*/
+
+/*Rather than having to constantly double-check you are not overwriting your earlier properties, 
+you can use the !important keyword to ensure these properties are always applied, regardless of
+order or specificity.*/
+span[class~="sr-only"] {
+    border: 0 !important;
+    /*to define the visible portions of an element*/
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    /*determines the shape the clip property should take
+    inset(50%) forming the clip-path into a rectangle within the element*/
+    clip-path: inset(50%) !important;
+    width: 1px !important;
+    height: 1px !important;
+    /*to prevent the text content from overflowing*/
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    /*take these hidden element out of the document flow
+    
+    This will ensure that not only are they no longer visible, 
+    but they are not even the page view
+    */
+    position: absolute !important;
+    padding: 0 !important;
+    margin: -1px !important;
+}
+
+h1 {
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;
+}
+
+h1 .flex {
+    display: flex;
+    /*
+    this will display the nested elements from bottom to top.
+    */
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+
+/*:first-of-type pseudo-selector is used to target the first element
+that matches the selector.*/
+h1 .flex span:first-of-type {
+    font-size: 0.7em;
+}
+
+/*:last-of-type pseudo-selector is used to target the last element
+that matches the selector.*/
+h1 .flex span:last-of-type {
+    font-size: 1.2em;
+}
+
+section {
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 2px solid #d0d0d5;
+}
+
+#years {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    /*fix it to the top of its container*/
+    top: 0;
+    color: #fff;
+    background-color: #0a0a23;
+    margin: 0 -2px;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+    /*adding position sticky moved the element to its own stack.
+    To ensure #years element does not get hidden by different stacks:*/
+    z-index: 999;
+}
+
+/*span[class] syntax will target any span element that has a class attribute set*/
+#years span[class] {
+    font-weight: bold;
+    width: 4.5rem;
+    text-align: right;
+}
+
+.table-wrap {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+/*
+The :not() pseudo-selector is used to target all elements that do not match the selector - in this case, 
+any of your span elements that do not have the sr-only class. This ensures that your earlier rules
+for the span[class~="sr-only"] selector are not overwritten.
+*/
+span {
+    font-weight: normal;
+}
+
+table {
+    /*Allows cell border to collapse into a single border, instead of a
+    border around each cell*/
+    border-collapse: collapse;
+    border: 0;
+}
