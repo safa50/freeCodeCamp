@@ -9,13 +9,15 @@ body {
 main {
     max-width: 1200px;
     margin: 20px auto;
+    margin-left:270px;
     padding: 20px;
     background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
-h1, h3 {
+h1,
+h3 {
     color: #2c3e50;
     margin-bottom: 10px;
 }
@@ -32,7 +34,8 @@ thead {
     border-bottom: 2px solid #ddd;
 }
 
-th, td {
+th,
+td {
     padding: 10px 15px;
     text-align: left;
     border: 1px solid #ddd;
@@ -40,7 +43,7 @@ th, td {
 
 th {
     font-weight: bold;
-    color:#2c3e50;
+    color: #2c3e50;
 }
 
 td a {
@@ -50,4 +53,57 @@ td a {
 
 td a:hover {
     text-decoration: underline;
+}
+
+/*Navigation Bar Styling*/
+#navbar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+#navbar header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar ul li {
+    margin-bottom: 10px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #0078d7;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 4px;
+    /*transition: background-color 0.5s, color 0.5s;*/
+}
+
+#navbar ul li a:hover {
+    background-color: #e6f3ff;
+    color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    #main {
+        width: 500px;
+    }
 }
