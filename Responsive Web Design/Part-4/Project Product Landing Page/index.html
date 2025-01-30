@@ -15,8 +15,10 @@
         <!--First section with headers-->
         <section class="heading">
             <header id="header">
-                <div>
-                    <img id="header-img" src="" alt="" />
+                <div class="logo">
+                    <img id="header-img"
+                        src="data:image/png;base64,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"
+                        alt="violin-logo" />
                 </div>
                 <nav id="nav-bar">
                     <ul>
@@ -24,7 +26,7 @@
                             <a class="nav-link" href="#features">Features</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="#how-it-works">How It Works</a>
+                            <a class="nav-link" href="#video-section">How It Works</a>
                         </li>
                         <li>
                             <a class="nav-link" href="#pricing">Pricing</a>
@@ -34,32 +36,62 @@
             </header>
         </section>
         <!--section with Title and Input-->
-        <section>
-            <h2>Safa Violin</h2>
+        <section id="hero">
+            <h1>Safa Violin</h1>
             <p>Your violinist for your special events</p>
             <form id="form" action="https://www.freecodecamp.com/email-submit">
                 <input id="email" name="email" type="email" placeholder="Enter your email address" required>
                 <input id="submit" type="submit" value="Get Info" class="button">
-            </form>            
+            </form>
         </section>
 
         <!--section with feature description-->
-        <section>
-
+        <section id="features">
+            <h2>Wat kan je verwachten</h2>
+            <div class="feature">
+                <h3>Snelle Intake</h3>
+                <p>Speciaal voor jullie ga ik samen met jullie in gesprek om te voldoen aan jullie wensen</p>
+            </div>
+            <div class="feature">
+                <h3>Muziek Op Maat</h3>
+                <p>Op maat voorbereide muziek dat perfect past voor jullie gelegenheid</p>
+            </div>
+            <div class="feature">
+                <h3>Fantastisch Optreden</h3>
+                <p>Uiteindelijk zal ik een sublieme optreden op mijn viool geven</p>
+            </div>
         </section>
 
-        <!--section with video (how-it-works)-->
-        <section>
-
+        <!--section with video-->
+        <section id="video-section">
+            <h2>Bekijk mijn video</h2>
+            <iframe id="video" width="560" height="315" src="https://youtu.be/xxZGZ_Bgn-M?si=bCgm36ENrXj-GzSY"
+                frameborder="0" allowfullscreen></iframe>
         </section>
 
         <!--section with pricing-->
-        <section>
+        <section id="pricing">
 
+            <div class="product">
+                <div class="level">
+                    Entree + eerste dans
+                </div>
+                <h2>€250</h2>
+                <button class="btn">Selecteer</button>
+            </div>
+            <div class="product">
+                <div class="level">
+                    Entree + eerste dans + eten
+                </div>
+                <h2>€350</h2>
+                <button class="btn">Selecteer</button>
+            </div>
         </section>
 
         <!--footer-->
-        <footer></footer>
+        <footer>
+            <span>Copyright 2025, Safa Violin</span>
+        </footer>
     </main>
 </body>
 
