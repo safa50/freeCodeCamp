@@ -1,196 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio Webpage</title>
-        <link rel="stylesheet" href="styles.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </head>
-    <body>
-        <!--Start Navbar-->
-        <div id="header">
-            <div class="container">
-                <nav id="navbar">
-                    <a href="#" class="logo"><span>Sa</span>fa
-                    </a>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#welcome-section">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="header-text">
-                    <p>Solutions Consultant</p>
-                    <h1>Hi, I'm <span>Safa</span><br>Dundar from the Netherlands</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!--Start Navbar-->
+    <div id="header">
+        <div class="container">
+            <nav id="navbar">
+                <a href="#" class="logo"><span>Sa</span>fa
+                </a>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#welcome-section">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contacts">Contact</a></li>
+                    <i class='bx bx-x' onclick="closemenu()"></i>
+                </ul>
+                <i class='bx bx-menu' onclick="openmenu()"></i>
+            </nav>
+
+
+            <div class="header-text">
+                <p>Solutions Consultant</p>
+                <h1>Hi, I'm <span>Safa</span><br>Dundar from the Netherlands</h1>
+            </div>
+
+
+
+        </div>
+    </div>
+    <!--End Navbar-->
+
+    <!--Start Welcome Section-->
+    <div id="welcome-section">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="profile-pics/Safa-Suite-Normal.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Magnam quaerat, ipsum officia esse aperiam totam ipsa facilis?
+                        Quidem quam minima, earum eius, tempore ex labore ipsam, ab unde harum amet.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Solutions Consultant</span><br>Consulting businesses in the DevOps ecosystem</li>
+                            <li><span>Violinist</span><br>Violinist by heart</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2019 - Current</span><br>Solutions Consultant DevOps Cloud</li>
+                            <li><span>2019 - Current</span><br>Violinist</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016 - 2018</span><br>MSc, Business Information Systems</li>
+                            <li><span>2013 - 2016</span><br>BSc, Industrial Engineering</li>
+                            <li><span>2006 - 2013</span><br>VWO (Pre University Education)</li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <!--End Navbar-->
+    </div>
+    <!--End Welcome Section-->
 
-        <!--Start Welcome Section-->
-        <div id="welcome-section">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="profile-pics/Safa-Suite-Normal.png">
-                    </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title">About Me</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Magnam quaerat, ipsum officia esse aperiam totam ipsa facilis? 
-                            Quidem quam minima, earum eius, tempore ex labore ipsam, ab unde harum amet.</p>
-
-                            <div class="tab-titles">
-                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                                <p class="tab-links" onclick="opentab('education')">Education</p>
-                            </div>
-                            <div class="tab-contents active-tab" id="skills">
-                                <ul>
-                                    <li><span>Solutions Consultant</span><br>Consulting businesses in the DevOps ecosystem</li>
-                                    <li><span>Violinist</span><br>Violinist by heart</li>
-                                </ul>
-                            </div>
-                            <div class="tab-contents" id="experience">
-                                <ul>
-                                    <li><span>2019 - Current</span><br>Solutions Consultant DevOps Cloud</li>
-                                    <li><span>2019 - Current</span><br>Violinist</li>
-                                </ul>
-                            </div>
-                            <div class="tab-contents" id="education">
-                                <ul>
-                                    <li><span>2016 - 2018</span><br>MSc, Business Information Systems</li>
-                                    <li><span>2013 - 2016</span><br>BSc, Industrial Engineering</li>
-                                    <li><span>2006 - 2013</span><br>VWO (Pre University Education)</li>
-                                </ul>
-                            </div>
-
-                    </div>
+    <!--Start Services Section-->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class='bx bx-code-alt'></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Quibusdam fuga maiores consequuntur enim eveniet neque voluptas!
+                        Vel facere dolorem nesciunt, officia corporis, modi, iusto repellat nihil unde vero corrupti
+                        illum?</p>
+                    <a href="">Learn more</a>
+                </div>
+                <div>
+                    <i class='bx bxs-briefcase'></i>
+                    <h2>Solution Consulting DevOps</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Magni, expedita nesciunt ullam nemo temporibus tenetur amet animi, placeat doloremque distinctio
+                        autem est quae ex, delectus deleniti dicta architecto cupiditate.
+                        Corporis?</p>
+                    <a href="">Learn more</a>
+                </div>
+                <div>
+                    <i class='bx bxs-music'></i>
+                    <h2>Violin Show</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Sunt vel, officiis error quidem accusantium consectetur velit, consequuntur earum, dolore iusto
+                        inventore.
+                        Beatae eum deleniti, esse consequatur magnam dolores aperiam molestiae.</p>
+                    <a href="">Learn more</a>
                 </div>
             </div>
         </div>
-        <!--End Welcome Section-->
+    </div>
+    <!--End Services Section-->
 
-        <!--Start Services Section-->
-        <div id="services">
-            <div class="container">
-                <h1 class="sub-title">My Services</h1>
-                <div class="services-list">
-                    <div>
-                        <i class='bx bx-code-alt'></i>
-                        <h2>Web Design</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Quibusdam fuga maiores consequuntur enim eveniet neque voluptas! 
-                            Vel facere dolorem nesciunt, officia corporis, modi, iusto repellat nihil unde vero corrupti illum?</p>
-                        <a href="">Learn more</a>
+    <!--Start Projects Section-->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="https://i.imgur.com/Ip3Ckyw.png" alt="project-survey-form">
+                    <div class="layer">
+                        <h3>Project Survey Form</h3>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
                     </div>
-                    <div>
-                        <i class='bx bxs-briefcase'></i>
-                        <h2>Solution Consulting DevOps</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Magni, expedita nesciunt ullam nemo temporibus tenetur amet animi, placeat doloremque distinctio autem est quae ex, delectus deleniti dicta architecto cupiditate. 
-                            Corporis?</p>
-                        <a href="">Learn more</a>
+                </div>
+                <div class="work">
+                    <img src="https://i.imgur.com/neZiU5T.png" alt="project-tribute-page">
+                    <div class="layer">
+                        <h3>Project Tribute Page</h3>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
                     </div>
-                    <div>
-                        <i class='bx bxs-music'></i>
-                        <h2>Violin Show</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                            Sunt vel, officiis error quidem accusantium consectetur velit, consequuntur earum, dolore iusto inventore. 
-                            Beatae eum deleniti, esse consequatur magnam dolores aperiam molestiae.</p>
-                        <a href="">Learn more</a>
+                </div>
+                <div class="work">
+                    <img src="https://i.imgur.com/IV6CFEk.png" alt="project-technical-documentation-page">
+                    <div class="layer">
+                        <h3>Project Technical Documentation Page</h3>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
             </div>
+            <a href="#" class="btn">See more</a>
         </div>
-        <!--End Services Section-->
+    </div>
+    <!--End Projects Section-->
 
-        <!--Start Projects Section-->
-        <div id="projects">
-            <div class="container">
-                <h1 class="sub-title">My Projects</h1>
-                <div class="work-list">
-                    <div class="work">
-                        <img src="https://i.imgur.com/Ip3Ckyw.png" alt="project-survey-form">
-                        <div class="layer">
-                            <h3>Project Survey Form</h3>
-                            <a href="#"><i class='bx bx-link-external'></i></a>
-                        </div>
+    <!--Start Contacts Section-->
+    <div id="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class='bx bx-send'></i> contact@example.com</p>
+                    <p><i class='bx bx-phone'></i> 0123456789</p>
+                    <div class="social-icons">
+                        <a href=""><i class='bx bxl-instagram'></i></a>
+                        <a href=""><i class='bx bxl-linkedin'></i></a>
+                        <a href=""><i class='bx bxl-github'></i></a>
                     </div>
-                    <div class="work">
-                        <img src="https://i.imgur.com/neZiU5T.png" alt="project-tribute-page">
-                        <div class="layer">
-                            <h3>Project Tribute Page</h3>
-                            <a href="#"><i class='bx bx-link-external'></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="https://i.imgur.com/IV6CFEk.png" alt="project-technical-documentation-page">
-                        <div class="layer">
-                            <h3>Project Technical Documentation Page</h3>
-                            <a href="#"><i class='bx bx-link-external'></i></a>
-                        </div>
-                    </div>
+                    <a href="" class="btn btn2">Download CV</a>
                 </div>
-                <a href="#" class="btn">See more</a>
-            </div>
-        </div>
-        <!--End Projects Section-->
-
-        <!--Start Contacts Section-->
-        <div id="contacts">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title">Contact Me</h1>
-                        <p><i class='bx bx-send' ></i> contact@example.com</p>
-                        <p><i class='bx bx-phone'></i> 0123456789</p>
-                        <div class="social-icons">
-                            <a href=""><i class='bx bxl-instagram' ></i></a>
-                            <a href=""><i class='bx bxl-linkedin' ></i></a>
-                            <a href=""><i class='bx bxl-github' ></i></a>
-                        </div>
-                        <a href="" class="btn btn2">Download CV</a>
-                    </div>
-                    <div class="contact-right">
-                        <form>
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="Email" placeholder="Your Email" required>
-                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
-                    </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
-        <!--End Contacts Section-->
+    </div>
+    <!--End Contacts Section-->
 
-        <!--Start Footer Section-->
-        <footer class="copyright">
-            <p>Copyright © 2025 @ Safa's. All Rights Reserved.</p>
+    <!--Start Footer Section-->
+    <footer class="copyright">
+        <p>Copyright © 2025 @ Safa's. All Rights Reserved.</p>
 
-        </footer>
-        <!--End Footer Section-->
-    </body>
+    </footer>
+    <!--End Footer Section-->
+</body>
 
-    <script>
+<script>
 
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        
-        function opentab(tabname) {
-            for(tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
         }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
 
-    </script>
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-150px";
+    }
+</script>
+
 </html>
