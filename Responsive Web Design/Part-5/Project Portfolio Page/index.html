@@ -2,48 +2,80 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Portfolio Webpage</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <!--Start Navbar-->
-        <header>
-            <div class="logo">
-                <h2>SD</h2>
+        <div id="header">
+            <div class="container">
+                <nav id="navbar">
+                    <a href="#" class="logo"><span>Sa</span>fa
+                    </a>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Solutions Consultant</p>
+                    <h1>Hi, I'm <span>Safa</span><br>Dundar from the Netherlands</h1>
+                </div>
             </div>
-            <nav id="navbar">
-                <ul>
-                    <li>
-                        <a href="#welcome-section">About</a>
-                    </li>
-                    <li>
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#contacts">Contacts</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        </div>
         <!--End Navbar-->
 
         <!--Start Welcome Section-->
         <section id="welcome-section">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Full-Stack Web Developer | Cloud | DevOps</p>
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="profile-pics/Safa-Suite-Normal.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Magnam quaerat, ipsum officia esse aperiam totam ipsa facilis? 
+                            Quidem quam minima, earum eius, tempore ex labore ipsam, ab unde harum amet.</p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Solutions Consultant</span><br>Consulting businesses in the DevOps ecosystem</li>
+                                    <li><span>Violinist</span><br>Violinist by heart</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2019 - Current</span><br>Solutions Consultant DevOps Cloud</li>
+                                    <li><span>2019 - Current</span><br>Violinist</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2016 - 2018</span><br>MSc, Business Information Systems</li>
+                                    <li><span>2013 - 2016</span><br>BSc, Industrial Engineering</li>
+                                    <li><span>2006 - 2013</span><br>VWO (Pre University Education)</li>
+                                </ul>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
         </section>
         <!--End Welcome Section-->
 
         <!--Start Projects Section-->
         <section id="Projects">
-            <h2>Projects</h2>
-        <div class="project-tile">
-            <a href="https://github.com/yourproject" target="_blank">
-                <img src="project-image.jpg" alt="Project Screenshot">
-                <p>Project Name</p>
-            </a>
-        </div>
+            
         </section>
         <!--End Projects Section-->
 
@@ -59,4 +91,22 @@
         </footer>
         <!--End Footer Section-->
     </body>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
 </html>
