@@ -39,4 +39,44 @@ class Category:
         return title + items + total
     
 def create_spend_chart(categories):
-    pass
+    title = "Percentage spent by category\n"
+
+    spent = []
+    for cat in categories:
+        total = 0
+        for item in cat.ledger:
+            if item['amount'] < 0:
+                total += -item['amount']
+        spent.append(total)
+
+    total_spent = sum(spent)
+
+    # percentages = []
+    # for s in spent:
+    #     percentages.append((s/total_spent) * 100)
+
+    percentages = [(s / total_spent) * 100 for s in spent]
+    percentages = [int(p // 10) * 10 for p in percentages]
+
+    chart = title
+    for i in range(100, -1, -10):
+        line = f"{i:>3}| "
+        for p in percentages:
+            line += "o  " if p >= i else "   "
+        chart += line + "\n"
+
+    chart += "    " + "-" * (len(categories) * 3 + 1) + "\n"
+
+    max_len = max(len(cat.name) for cat in categories)
+
+    for i in range(max_len):
+        line = "     "
+        for cat in categories:
+            if i < len(cat.name):
+                line += cat.name[i] + "  "
+            else:
+                line += "   "
+        chart += line
+        if i < max_len - 1:
+            chart += "\n"
+    return chart
