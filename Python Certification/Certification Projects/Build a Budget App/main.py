@@ -27,6 +27,16 @@ class Category:
             category.deposit(amount, f"Transfer from {self.name}")
             return True
         return False
+
+    def __str__(self):
+        title = f"{self.name:*^30}\n"
+        items = ""
+        for item in self.ledger:
+            description = item['description'][:23]
+            amount = f"{item['amount']:.2f}"
+            items += f"{description:<23}{amount:>7}\n"
+            total = f"Total: {self.get_balance():.2f}"
+        return title + items + total
     
 def create_spend_chart(categories):
     pass
